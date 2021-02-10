@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Grootan Automation Task]">
+  <test thread-count="5" name="Exploring the grootan.com(failed)">
+    <classes>
+      <class name="testcases.TC_001_Grootan">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testDetails"/>
+          <include name="runTest"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="setDetails"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- testcases.TC_001_Grootan -->
+      <class name="testcases.TC_002_Team">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testDetails"/>
+          <include name="setDetails"/>
+          <include name="teamsTask"/>
+          <include name="endReport"/>
+          <include name="startReport"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- testcases.TC_002_Team -->
+    </classes>
+  </test> <!-- Exploring the grootan.com(failed) -->
+</suite> <!-- Failed suite [Grootan Automation Task] -->
