@@ -18,8 +18,10 @@ import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
 import org.apache.commons.mail.SimpleEmail;
+import org.apache.hc.core5.util.Asserts;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -35,6 +37,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
@@ -63,12 +66,31 @@ public class SiteSpecificMethods {
 	public static ExtentTest test;
 	public static ExtentTest node;
 	public String testCaseName, testDescription;
-
+	public static FileOutputStream f;
+	
+	
 	public static int folderCount = 1;
 
 	@BeforeSuite
 	public void startReport() throws IOException, Exception {
-
+		
+		f=new FileOutputStream(new File("./ExtentReports/TSR.xlsx"));
+		XSSFWorkbook head=new XSSFWorkbook();
+		XSSFCellStyle headStyle = head.createCellStyle();
+		headStyle.setFillForegroundColor(IndexedColors.LIGHT_ORANGE.getIndex());
+		headStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		
+		XSSFRow headRow = head.createSheet("TSR").createRow(0);
+		XSSFCell tcHead = headRow.createCell(0);
+		tcHead.setCellValue("TEST CASE NAME");
+		tcHead.setCellStyle(headStyle);
+		XSSFCell stsHead = headRow.createCell(1);
+		stsHead.setCellValue("STATUS");
+		stsHead.setCellStyle(headStyle);
+		
+		head.write(f);
+		head.close();
+		
 		reporter = new ExtentHtmlReporter(".//ExtentReports//result.html");
 
 		reporter.setAppendExisting(true);
@@ -89,8 +111,8 @@ public class SiteSpecificMethods {
 	}
 
 	@BeforeMethod
-	public void startBrowser() {
-
+	public void startBrowser() throws FileNotFoundException {
+		
 		node = test.createNode(testCaseName);
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
@@ -102,6 +124,7 @@ public class SiteSpecificMethods {
 
 	@AfterMethod
 	public void closeBrowser() {
+		
 		System.out.println(folderCount);
 		++folderCount;
 
@@ -110,8 +133,9 @@ public class SiteSpecificMethods {
 	}
 
 	@AfterSuite()
-	public void endReport() {
+	public void endReport() throws IOException {
 		extent.flush();
+		f.close();
 
 	}
 
@@ -145,7 +169,36 @@ public class SiteSpecificMethods {
 		}
 
 	}
-
+	public static void fileExcel(int m,String tcName) throws IOException {
+		XSSFWorkbook book=new XSSFWorkbook("./ExtentReports/TSR.xlsx");
+		XSSFCellStyle pass = book.createCellStyle();
+		
+		pass.setFillForegroundColor(IndexedColors.BRIGHT_GREEN.getIndex());
+		pass.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		
+		XSSFCellStyle fail = book.createCellStyle();
+		
+		fail.setFillForegroundColor(IndexedColors.RED.getIndex());
+		fail.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+		
+		XSSFSheet tsrSheet = book.getSheet("TSR");
+		XSSFRow tc1Row = tsrSheet.createRow(m);
+		tc1Row.createCell(0).setCellValue(tcName);
+		if (tc1Row.getCell(0).getStringCellValue().equalsIgnoreCase(tcName)) {
+			tc1Row.createCell(1).setCellStyle(pass);
+			tc1Row.createCell(1).setCellValue("PASS");
+				
+		}
+		else {
+			tc1Row.createCell(1).setCellStyle(fail);
+			tc1Row.createCell(1).setCellValue("FAIL");
+			
+			
+		}
+		
+		book.write(f);
+		book.close();
+	}
 	public void explicitlyWait() throws InterruptedException {
 		Thread.sleep(3000);
 

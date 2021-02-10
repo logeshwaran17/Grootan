@@ -92,8 +92,8 @@ public class Team extends SiteSpecificMethods {
 
 	public Team printJuniorEngg() throws Exception {
 		try {
-			FileOutputStream f = new FileOutputStream(new File("./ExtentReports/TSR.xlsx"));
-			XSSFWorkbook wb = new XSSFWorkbook();
+			
+			XSSFWorkbook wb = new XSSFWorkbook("./ExtentReports/TSR.xlsx");
 			XSSFSheet je = wb.createSheet("JUNIOR ENGINEERS");
 			XSSFCellStyle cs = wb.createCellStyle();
 			cs.setFillForegroundColor(IndexedColors.BRIGHT_GREEN.getIndex());
@@ -115,7 +115,7 @@ public class Team extends SiteSpecificMethods {
 			}
 			wb.write(f);
 			wb.close();
-			f.close();
+		//	f.close();
 			
 			System.out.println("Team JE export Success");
 

@@ -15,6 +15,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -25,10 +26,11 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class TC_003_ImageComparison {
-
+		
 	@Test
 	public void compareFolders() throws IOException {
-
+		int tcNum=3;
+		String testCaseName=this.getClass().getSimpleName();
 		File f1 = new File(".//folder1/");
 
 		File[] folder1 = f1.listFiles();
@@ -63,7 +65,9 @@ public class TC_003_ImageComparison {
 			}
 
 		}
-
+		SiteSpecificMethods.fileExcel(tcNum, testCaseName);
 	}
+	
+		
 
 }

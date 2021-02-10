@@ -1,41 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="6" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20849" started-at="2021-02-10T05:16:23 IST" finished-at="2021-02-10T05:16:44 IST">
+  <suite name="Grootan Automation Task" duration-ms="95250" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:08:19 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20849" started-at="2021-02-10T05:16:23 IST" finished-at="2021-02-10T05:16:44 IST">
+    <test name="Exploring the grootan.com" duration-ms="92833" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:08:17 IST">
       <class name="testcases.TC_002_Team">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="startReport" is-config="true" duration-ms="555" started-at="2021-02-10T05:16:22 IST" finished-at="2021-02-10T05:16:23 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="setDetails()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="setDetails" is-config="true" duration-ms="0" started-at="2021-02-10T05:16:23 IST" finished-at="2021-02-10T05:16:23 IST">
+        <test-method status="PASS" signature="setDetails()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="setDetails" is-config="true" duration-ms="0" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:06:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setDetails -->
-        <test-method status="PASS" signature="testDetails()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="testDetails" is-config="true" duration-ms="0" started-at="2021-02-10T05:16:23 IST" finished-at="2021-02-10T05:16:23 IST">
+        <test-method status="PASS" signature="testDetails()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="testDetails" is-config="true" duration-ms="0" started-at="2021-02-11T02:07:59 IST" finished-at="2021-02-11T02:07:59 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDetails -->
-        <test-method status="PASS" signature="startBrowser()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="startBrowser" is-config="true" duration-ms="9831" started-at="2021-02-10T05:16:23 IST" finished-at="2021-02-10T05:16:33 IST">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="startBrowser" is-config="true" duration-ms="7299" started-at="2021-02-11T02:07:59 IST" finished-at="2021-02-11T02:08:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method status="PASS" signature="teamsTask()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="teamsTask" duration-ms="10717" started-at="2021-02-10T05:16:33 IST" finished-at="2021-02-10T05:16:44 IST">
+        <test-method status="PASS" signature="teamsTask()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="teamsTask" duration-ms="10093" started-at="2021-02-11T02:08:06 IST" finished-at="2021-02-11T02:08:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teamsTask -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="closeBrowser" is-config="true" duration-ms="233" started-at="2021-02-10T05:16:44 IST" finished-at="2021-02-10T05:16:44 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="closeBrowser" is-config="true" duration-ms="273" started-at="2021-02-11T02:08:16 IST" finished-at="2021-02-11T02:08:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases.TC_002_Team@10dba097]" name="endReport" is-config="true" duration-ms="883" started-at="2021-02-10T05:16:44 IST" finished-at="2021-02-10T05:16:45 IST">
+        <test-method status="PASS" signature="getExcelReport()[pri:0, instance:testcases.TC_002_Team@67b467e9]" name="getExcelReport" is-config="true" duration-ms="78" started-at="2021-02-11T02:08:17 IST" finished-at="2021-02-11T02:08:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelReport -->
+      </class> <!-- testcases.TC_002_Team -->
+      <class name="testcases.TC_001_Grootan">
+        <test-method status="PASS" signature="setDetails()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="setDetails" is-config="true" duration-ms="0" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:06:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDetails -->
+        <test-method status="PASS" signature="testDetails()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="testDetails" is-config="true" duration-ms="0" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:06:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDetails -->
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="startBrowser" is-config="true" duration-ms="9042" started-at="2021-02-11T02:06:44 IST" finished-at="2021-02-11T02:06:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="runTest()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="runTest" duration-ms="29020" started-at="2021-02-11T02:06:53 IST" finished-at="2021-02-11T02:07:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="closeBrowser" is-config="true" duration-ms="244" started-at="2021-02-11T02:07:22 IST" finished-at="2021-02-11T02:07:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="startBrowser" is-config="true" duration-ms="7203" started-at="2021-02-11T02:07:22 IST" finished-at="2021-02-11T02:07:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method status="PASS" signature="runTest()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="runTest" duration-ms="29045" started-at="2021-02-11T02:07:29 IST" finished-at="2021-02-11T02:07:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="closeBrowser" is-config="true" duration-ms="294" started-at="2021-02-11T02:07:58 IST" finished-at="2021-02-11T02:07:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="getExcelReport()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="getExcelReport" is-config="true" duration-ms="157" started-at="2021-02-11T02:08:16 IST" finished-at="2021-02-11T02:08:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getExcelReport -->
+      </class> <!-- testcases.TC_001_Grootan -->
+    </test> <!-- Exploring the grootan.com -->
+    <test name="Image Comparison " duration-ms="2402" started-at="2021-02-11T02:08:17 IST" finished-at="2021-02-11T02:08:19 IST">
+      <class name="testcases.TC_003_ImageComparison">
+        <test-method status="PASS" signature="compareFolders()[pri:0, instance:testcases.TC_003_ImageComparison@281e3708]" name="compareFolders" duration-ms="2402" started-at="2021-02-11T02:08:17 IST" finished-at="2021-02-11T02:08:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- compareFolders -->
+      </class> <!-- testcases.TC_003_ImageComparison -->
+      <class name="testcases.TC_001_Grootan">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="startReport" is-config="true" duration-ms="1063" started-at="2021-02-11T02:06:43 IST" finished-at="2021-02-11T02:06:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:testcases.TC_001_Grootan@10a035a0]" name="endReport" is-config="true" duration-ms="472" started-at="2021-02-11T02:08:19 IST" finished-at="2021-02-11T02:08:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- testcases.TC_002_Team -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testcases.TC_001_Grootan -->
+    </test> <!-- Image Comparison  -->
+  </suite> <!-- Grootan Automation Task -->
 </testng-results>
